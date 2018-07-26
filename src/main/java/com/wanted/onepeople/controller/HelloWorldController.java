@@ -1,5 +1,6 @@
 package com.wanted.onepeople.controller;
 
+import com.wanted.onepeople.exception.MyException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,4 +26,8 @@ public class HelloWorldController {
         return "index";
     }
 
+    @RequestMapping("/json")
+    public String json() throws MyException {
+        throw new MyException("发生错误2");
+    }
 }
