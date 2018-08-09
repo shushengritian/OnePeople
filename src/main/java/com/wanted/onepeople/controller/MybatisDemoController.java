@@ -1,6 +1,7 @@
 package com.wanted.onepeople.controller;
 
 import com.wanted.onepeople.model.City;
+import com.wanted.onepeople.model.User;
 import com.wanted.onepeople.service.MybatisDemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,15 +17,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class MybatisDemoController {
 
     @Autowired
-    private MybatisDemoService service;
+    private MybatisDemoService demoService;
 
-    @RequestMapping(value = "/api/city",method = RequestMethod.GET)
-    public City getCity(@RequestParam(value = "cityName",required = true) String cityName) {
+    @RequestMapping(value = "/user",method = RequestMethod.GET)
+    public User getUserById(@RequestParam(value = "id",required = true) Long id) {
 
-        return service.getCity(cityName);
+        return demoService.getUserById(id);
 
     }
-
-
 
 }

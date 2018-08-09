@@ -1,6 +1,7 @@
 package com.wanted.onepeople.dao;
 
 import com.wanted.onepeople.model.City;
+import com.wanted.onepeople.model.User;
 import org.apache.ibatis.annotations.Param;
 
 /**
@@ -10,10 +11,10 @@ import org.apache.ibatis.annotations.Param;
 public interface MybatisDemoMapper {
 
     /**
-     * 根据城市名称，查询城市信息
+     * 根据id，查询用户信息
      *
-     * @param cityName 城市名
+     * @param id
      */
-    City getCity(@Param("cityName") String cityName);
+    User getUserById(@Param("id") Long id);
 
 }

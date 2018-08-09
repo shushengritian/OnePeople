@@ -1,6 +1,7 @@
 package com.wanted.onepeople.service;
 
 import com.wanted.onepeople.model.City;
+import com.wanted.onepeople.model.User;
 
 /**
  * @author xiyouquedongxing
@@ -9,8 +10,8 @@ import com.wanted.onepeople.model.City;
 public interface MybatisDemoService {
 
     /**
-     * 根据城市名称，查询城市信息
-     * @param cityName
+     * 根据id，查询用户
+     * @param id
      */
-    public City getCity(String cityName);
+     User getUserById(Long id);
 }

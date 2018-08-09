@@ -2,6 +2,7 @@ package com.wanted.onepeople.service.impl;
 
 import com.wanted.onepeople.dao.MybatisDemoMapper;
 import com.wanted.onepeople.model.City;
+import com.wanted.onepeople.model.User;
 import com.wanted.onepeople.service.MybatisDemoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,7 +18,8 @@ public class MybatisDemoServiceImpl implements MybatisDemoService {
     private MybatisDemoMapper demoMapper;
 
     @Override
-    public City getCity(String cityName) {
-        return demoMapper.getCity(cityName);
+    public User getUserById(Long id) {
+
+        return demoMapper.getUserById(id);
     }
 }
