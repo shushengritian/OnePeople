@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wanted.onepeople.dao.cluster.CityMapper">
+    <resultMap id="BaseResultMap" type="com.wanted.onepeople.model.City">
+        <result column="id" property="id"/>
+        <result column="provinceId" property="province_id"/>
+        <result column="cityName" property="city_name"/>
+        <result column="description" property="description"/>
+    </resultMap>
+
+    <parameterMap id="City" type="com.wanted.onepeople.model.City"/>
+
+    <sql id="Base_Column_List">
+        id,province_id,city_name,description
+    </sql>
+    <select id="getCityByName" resultMap="BaseResultMap" parameterType="java.lang.String">
+        select
+        <include refid="Base_Column_List"/>
+        from city
+        where city_name = #{cityName}
+    </select>
+
+</mapper>
