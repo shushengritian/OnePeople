@@ -2,11 +2,13 @@ package com.wanted.onepeople.dao.master;
 
 import com.wanted.onepeople.model.User;
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
 
 /**
  * @author xiyouquedongxing
  * @date 2018/8/14 15:03
  */
+@Component
 public interface UserMapper {
 
     /**

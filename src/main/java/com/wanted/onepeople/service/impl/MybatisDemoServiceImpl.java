@@ -16,11 +16,15 @@ import org.springframework.stereotype.Service;
 @Service
 public class MybatisDemoServiceImpl implements MybatisDemoService {
 
-    @Autowired
     private UserMapper userMapper;
 
-    @Autowired
     private CityMapper cityMapper;
+
+    @Autowired
+    public MybatisDemoServiceImpl(UserMapper userMapper,  CityMapper cityMapper){
+        this.userMapper = userMapper;
+        this.cityMapper = cityMapper;
+    }
 
     @Override
     public User getUserById(Long id) {
