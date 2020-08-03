@@ -12,9 +12,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 /**mapper接口类扫描包*/
 @MapperScan("com.wanted.onepeople.dao")
-public class OnepeopleApplication {
+public class OnePeopleApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OnepeopleApplication.class, args);
+        SpringApplication.run(OnePeopleApplication.class, args);
     }
 }

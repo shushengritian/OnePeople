@@ -3,7 +3,10 @@ package com.wanted.onepeople.controller;
 import com.wanted.onepeople.exception.MyException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -16,6 +19,14 @@ public class HelloWorldController {
     @RequestMapping("/hello")
     public String helloWorld() {
         return "Hello World";
+    }
+
+    @GetMapping("/hello")
+    public String helloWorld(@RequestParam(name = "who") String who){
+        if(StringUtils.isEmpty(who)){
+            who = "World";
+        }
+        return "Hello " + who;
     }
 
     @RequestMapping("/")

@@ -1,4 +1,4 @@
-package com.wanted.onepeople.leetcode;
+package com.wanted.onepeople.learning.leetcode;
 
 
 /**

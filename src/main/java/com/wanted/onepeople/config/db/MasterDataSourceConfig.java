@@ -1,4 +1,4 @@
-package com.wanted.onepeople.config.ds;
+package com.wanted.onepeople.config.db;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.apache.ibatis.session.SqlSessionFactory;

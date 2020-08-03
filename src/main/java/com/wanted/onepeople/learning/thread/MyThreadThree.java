@@ -1,4 +1,4 @@
-package com.wanted.onepeople.test;
+package com.wanted.onepeople.learning.thread;
 
 /**
  * 功能描述：
@@ -6,19 +6,18 @@ package com.wanted.onepeople.test;
  * @author Fdc
  * @Date 2020-06-12
  */
-public class MyThreadOne extends Thread{
+public class MyThreadThree extends Thread {
 
     @Override
     public void run() {
         while(true){
             try {
-                System.out.println("MyThreadOne心跳运行.");
-                Thread.sleep(1000);
+                System.out.println("MyThreadThree心跳运行...");
+                Thread.sleep(3000);
             }catch (Exception e){
                 e.printStackTrace();
             }
         }
     }
-
 
 }
