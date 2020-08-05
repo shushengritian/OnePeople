@@ -26,16 +26,16 @@ public class ClusterDataSourceConfig {
     static final String PACKAGE = "com.wanted.onepeople.dao.cluster";
     static final String MAPPER_LOCATION = "classpath:mapper/cluster/*.xml";
 
-    @Value("${cluster.datasource.url}")
+    @Value("${datasource.cluster.url}")
     private String url;
 
-    @Value("${cluster.datasource.username}")
+    @Value("${datasource.cluster.username}")
     private String user;
 
-    @Value("${cluster.datasource.password}")
+    @Value("${datasource.cluster.password}")
     private String password;
 
-    @Value("${cluster.datasource.driver-class-name}")
+    @Value("${datasource.cluster.driver-class-name}")
     private String driverClass;
 
     @Bean(name = "clusterDataSource")

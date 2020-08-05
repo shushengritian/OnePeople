@@ -27,16 +27,16 @@ public class MasterDataSourceConfig {
     static final String PACKAGE = "com.wanted.onepeople.dao.master";
     static final String MAPPER_LOCATION = "classpath:mapper/master/*.xml";
 
-    @Value("${master.datasource.url}")
+    @Value("${datasource.master.url}")
     private String url;
 
-    @Value("${master.datasource.username}")
+    @Value("${datasource.master.username}")
     private String user;
 
-    @Value("${master.datasource.password}")
+    @Value("${datasource.master.password}")
     private String password;
 
-    @Value("${master.datasource.driver-class-name}")
+    @Value("${datasource.master.driver-class-name}")
     private String driverClass;
 
     @Bean(name = "masterDataSource")
