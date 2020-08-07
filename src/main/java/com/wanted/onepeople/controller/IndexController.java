@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class IndexController {
-	@GetMapping(value = {"", "/"})
+	/*@GetMapping(value = {"", "/"})
 	public String index() {
 		return "This is a Spring Boot Admin Client.";
-	}
+	}*/
 }

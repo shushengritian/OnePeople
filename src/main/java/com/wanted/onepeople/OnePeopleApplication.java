@@ -10,8 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2018/08/08
  */
 @SpringBootApplication
-/**mapper接口类扫描包*/
-/*@MapperScan("com.wanted.onepeople.dao")*/
+@MapperScan("com.wanted.onepeople.dao")
 public class OnePeopleApplication {
 
     public static void main(String[] args) {
