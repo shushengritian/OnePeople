@@ -48,9 +48,16 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <dependency>
+        <!-- thymeleaf语法糖 https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html -->
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>-->
+
+        <!-- freemarker语法糖 https://freemarker.apache.org/docs/dgui.html -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
 
         <!-- aop切片日志 -->

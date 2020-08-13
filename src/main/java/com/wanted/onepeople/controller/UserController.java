@@ -5,6 +5,9 @@ import java.util.*;
 
 import io.swagger.annotations.*;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author xiyouquedongxing
@@ -68,6 +71,20 @@ public class UserController {
         // 处理"/users/{id}"的DELETE请求，用来删除User
         users.remove(id);
         return "success";
+    }
+
+    @GetMapping("/login")
+    public ModelAndView login(){
+        return new ModelAndView("page/login");
+    }
+
+    @PostMapping("/login")
+    public ModelAndView login(User user, HttpServletRequest request){
+        ModelAndView mv = new ModelAndView();
+        mv.addObject(user);
+        mv.setViewName("redirect:/");
+        request.getSession().setAttribute("user", user);
+        return mv;
     }
 
 }
