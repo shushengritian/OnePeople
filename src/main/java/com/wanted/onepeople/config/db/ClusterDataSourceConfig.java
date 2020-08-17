@@ -17,7 +17,7 @@ import javax.sql.DataSource;
  * @author xiyouquedongxing
  * @date 2018/8/14 14:53
  */
-@Configuration
+/*@Configuration*/
 /**扫描 Mapper 接口并容器管理*/
 @MapperScan(basePackages = ClusterDataSourceConfig.PACKAGE, sqlSessionFactoryRef = "clusterSqlSessionFactory")
 public class ClusterDataSourceConfig {

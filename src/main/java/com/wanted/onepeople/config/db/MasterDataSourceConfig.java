@@ -18,7 +18,7 @@ import javax.sql.DataSource;
  * @author xiyouquedongxing
  * @date 2018/8/14 14:54
  */
-@Configuration
+/*@Configuration*/
 /**扫描 Mapper 接口并容器管理*/
 @MapperScan(basePackages = MasterDataSourceConfig.PACKAGE, sqlSessionFactoryRef = "masterSqlSessionFactory")
 public class MasterDataSourceConfig {
