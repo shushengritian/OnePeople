@@ -30,7 +30,7 @@ public class AopLog {
     /**
      * 切入点
      * */
-    @Pointcut("execution(public * com.wanted.onepeople.controller.AopLogController.*(..))")
+    @Pointcut("execution(* com.wanted.onepeople.controller..*.*(..))")
     public void log(){
 
     }

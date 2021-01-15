@@ -1,8 +1,0 @@
-application:
-  name: prod环境 @artifactId@
-  version: prod环境 @version@
-developer:
-  name: prod环境 xiyouquedongxing
-  website: prod环境 http://xiyouquedongxing.world
-  qq: prod环境 1332332333
-  phone-number: prod环境 17688882333
