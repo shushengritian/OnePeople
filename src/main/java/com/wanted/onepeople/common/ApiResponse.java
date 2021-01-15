@@ -1,4 +1,4 @@
-package com.wanted.onepeople.model;
+package com.wanted.onepeople.common;
 
 import com.wanted.onepeople.constant.Status;
 import com.wanted.onepeople.exception.BaseException;

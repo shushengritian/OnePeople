@@ -1,7 +1,7 @@
 package com.wanted.onepeople.exception;
 
 import com.wanted.onepeople.dto.ErrorInfo;
-import com.wanted.onepeople.model.ApiResponse;
+import com.wanted.onepeople.common.ApiResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

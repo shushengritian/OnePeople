@@ -3,7 +3,7 @@ package com.wanted.onepeople.controller;
 import com.wanted.onepeople.constant.Status;
 import com.wanted.onepeople.exception.JsonException;
 import com.wanted.onepeople.exception.PageException;
-import com.wanted.onepeople.model.ApiResponse;
+import com.wanted.onepeople.common.ApiResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
