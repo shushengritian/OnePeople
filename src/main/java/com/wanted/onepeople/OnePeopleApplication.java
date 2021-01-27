@@ -1,5 +1,6 @@
 package com.wanted.onepeople;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author xiyouquedongxing
  * @date 2018/08/08
  */
+@MapperScan(basePackages = {"com.wanted.onepeople.mapper"})
 @SpringBootApplication
 public class OnePeopleApplication {
 
