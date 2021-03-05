@@ -1,6 +1,9 @@
 package com.wanted.onepeople.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import tk.mybatis.mapper.annotation.KeySql;
 
 import javax.persistence.Id;
@@ -14,6 +17,9 @@ import java.util.Date;
  * @Date 2021-03-05
  */
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Table(name = "orm_user")
 public class User implements Serializable {
     /**
