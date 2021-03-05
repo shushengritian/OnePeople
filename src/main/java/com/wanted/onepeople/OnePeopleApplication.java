@@ -1,8 +1,8 @@
 package com.wanted.onepeople;
 
+import tk.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 /**
  * SpringBoot 项目启动类
@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @date 2018/08/08
  */
 @SpringBootApplication
-@ComponentScan(basePackages = "com.wanted.onepeople.mapper")
+@MapperScan(basePackages = {"com.wanted.onepeople.mapper"})
 public class OnePeopleApplication {
 
     public static void main(String[] args) {
