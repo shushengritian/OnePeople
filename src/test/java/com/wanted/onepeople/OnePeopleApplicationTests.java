@@ -29,4 +29,12 @@ public class OnePeopleApplicationTests {
         Assert.assertTrue(CollUtil.isNotEmpty(userList));
         log.debug("【userList】= {}", userList);
     }
+
+    @Test
+    public void selectById(){
+        User user = mapper.selectByPrimaryKey(3);
+        Assert.assertTrue("未查询到用户", user != null);
+        log.error("user= {}", user);
+    }
+
 }
