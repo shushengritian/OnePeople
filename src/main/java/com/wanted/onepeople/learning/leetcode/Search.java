@@ -6,7 +6,7 @@ package com.wanted.onepeople.learning.leetcode;
  * @Author fdc
  * @Date 2021-09-22
  */
-public class Solution {
+public class Search {
 
 
     public static void main(String[] args) {
