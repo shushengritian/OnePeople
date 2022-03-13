@@ -1,5 +1,7 @@
 package com.wanted.onepeople.model;
 
+import com.wanted.onepeople.annotation.Desensitization;
+import com.wanted.onepeople.enumerate.DesensitizationFieldType;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -11,6 +13,7 @@ import org.springframework.stereotype.Component;
 public class User {
 
     private Long id;
+    @Desensitization(type = DesensitizationFieldType.NAME)
     private String name;
     private Integer age;
     private City city;
