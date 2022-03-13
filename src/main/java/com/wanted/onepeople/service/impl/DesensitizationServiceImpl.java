@@ -40,8 +40,8 @@ public class DesensitizationServiceImpl implements DesensitizationService {
                 // if判断：检查该字段上有没有标注了@Desensit注解
                 if (field.isAnnotationPresent(Desensitization.class)) {
                     // 通过反射获取到该字段上标注的@Desensit注解的详细信息
-                    Desensitization roleDesensit = field.getAnnotation(Desensitization.class);
-                    DesensitizationFieldType type = roleDesensit.type();
+                    Desensitization roleDesensitization = field.getAnnotation(Desensitization.class);
+                    DesensitizationFieldType type = roleDesensitization.type();
                     // 让我们在反射时能访问到私有变量
                     field.setAccessible(true);
                     String value;
