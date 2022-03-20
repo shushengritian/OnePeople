@@ -5,6 +5,9 @@ import com.google.common.util.concurrent.ThreadFactoryBuilder;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.concurrent.*;
+import java.util.concurrent.locks.ReadWriteLock;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 /**
  * 功能描述：
@@ -19,17 +22,20 @@ public class Test {
 
     public static void main(String[] args) {
 
-        ThreadFactory namedThreadFactory = new ThreadFactoryBuilder()
+        ReadWriteLock lock = new ReentrantReadWriteLock();
+
+
+        /*ThreadFactory namedThreadFactory = new ThreadFactoryBuilder()
                 .setNameFormat("demo-pool-%d").build();
         ExecutorService singleThreadPool = new ThreadPoolExecutor(2, 2,
                 0L, TimeUnit.MILLISECONDS,
                 new LinkedBlockingQueue<Runnable>(1024), namedThreadFactory, new ThreadPoolExecutor.AbortPolicy());
 
         singleThreadPool.execute(()-> System.out.println(Thread.currentThread().getName()));
-        singleThreadPool.shutdown();
+        singleThreadPool.shutdown();*/
 
         /*try {
-            method_04();
+            method_03();
         }catch (Exception e){
             e.printStackTrace();
         }*/
