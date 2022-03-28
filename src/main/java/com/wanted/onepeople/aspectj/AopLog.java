@@ -47,12 +47,12 @@ public class AopLog {
         ServletRequestAttributes attributes = (ServletRequestAttributes)RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = Objects.requireNonNull(attributes).getRequest();
 
-        log.info("【请求 URL】：{}", request.getRequestURL());
+        /*log.info("【请求 URL】：{}", request.getRequestURL());
         log.info("【请求 IP】：{}", request.getRemoteAddr());
         log.info("【请求类名】：{}，【请求方法名】：{}", point.getSignature().getDeclaringTypeName(), point.getSignature().getName());
-
+*/
         Map<String, String[]> parameterMap = request.getParameterMap();
-        log.info("【请求参数】：{}", JSONUtil.toJsonStr(parameterMap));
+        //log.info("【请求参数】：{}", JSONUtil.toJsonStr(parameterMap));
         Long start = System.currentTimeMillis();
         request.setAttribute(START_TIME,start);
 
@@ -69,7 +69,7 @@ public class AopLog {
     @Around("log()")
     public Object aroundLog(ProceedingJoinPoint point) throws Throwable {
         Object res = point.proceed();
-        log.info("【返回值】：{}", JSONUtil.toJsonStr(res));
+        //log.info("【返回值】：{}", JSONUtil.toJsonStr(res));
         return res;
     }
 
@@ -85,12 +85,12 @@ public class AopLog {
 
         Long start = (Long)request.getAttribute(START_TIME);
         Long end = System.currentTimeMillis();
-        log.info("【请求耗时】：{}毫秒",end - start);
+        //log.info("【请求耗时】：{}毫秒",end - start);
 
         String header = request.getHeader("User-Agent");
         UserAgent userAgent = UserAgent.parseUserAgentString(header);
-        log.info("【浏览器类型】：{}，【操作系统】：{}，【原始User-Agent】：{}", userAgent.getBrowser().toString(),
-                userAgent.getOperatingSystem().toString(), header);
+        //log.info("【浏览器类型】：{}，【操作系统】：{}，【原始User-Agent】：{}", userAgent.getBrowser().toString(),
+         //       userAgent.getOperatingSystem().toString(), header);
 
     }
 
